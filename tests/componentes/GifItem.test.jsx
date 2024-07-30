@@ -21,5 +21,13 @@ describe('Pruebas en <GifItem/>',()=>{
         expect(src).toBe(url);
         expect(alt).toBe(title);
         
-    })
+    });
+
+    test('debe de mostrar el titulo en el componente',()=>{
+        render(<GifItem title={title} url={url}/>);
+        expect(screen.getByText(title)).toBeTruthy();
+        
+
+
+    });
 });
