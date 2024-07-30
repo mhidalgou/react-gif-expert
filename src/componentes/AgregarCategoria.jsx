@@ -1,4 +1,6 @@
-import { useState } from  'react'
+import { useState } from  'react';
+import PropTypes from 'prop-types';
+
 export const AgregarCategoria=({onNuevaCategoria})=>{
 
     const [valorEntrada, setValorEntrada]=useState('')
@@ -28,4 +30,9 @@ export const AgregarCategoria=({onNuevaCategoria})=>{
             />
         </form>
     )
+}
+
+AgregarCategoria.propTypes={
+    onNuevaCategoria: PropTypes.func.isRequired,
+
 }
